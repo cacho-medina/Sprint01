@@ -1,10 +1,9 @@
 let entrada = document.getElementById("ingresar_texto");
-let secundario = document.querySelector(".secondary");
 let main = document.querySelector(".main");
 let padre = document.getElementById("mostrar_texto");
-
+let muñeco = document.querySelector(".muñeco");
 function encriptar() {
-    padre.removeChild(secundario);
+    muñeco.className = "muñeco_escondido";
     main.innerHTML = entrada.value;
     main.className = "salida";
 }

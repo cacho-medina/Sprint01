@@ -11,8 +11,8 @@
 }
 
 body {
-    min-width: 100vw;
-    min-height: 933px;
+    width: 100vw;
+    height: auto;
     background-color: var(--fondo);
     color: var(--font-color);
 }
@@ -96,11 +96,16 @@ body {
     padding: 32px;
     border-radius: 32px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    text-align: center;
+    text-align: left;
     overflow: auto;
     line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .main {
+    text-align: center;
     font-weight: 700;
     font-size: 1.5rem;
     color: #343a40;
@@ -111,6 +116,10 @@ body {
     font-weight: 400;
     color: rgba(73, 80, 87, 1);
 }
+.muñeco {
+    display: none;
+}
+/*--------CLASE PARA EL TEXTO DE SALIDA--------*/
 .salida {
     text-align: left;
     color: var(--font-color);
@@ -122,7 +131,6 @@ body {
 @media screen and (min-width: 768px) {
     body {
         width: 100%;
-        min-height: 1174px;
     }
     .header {
         height: 200px;
@@ -151,14 +159,58 @@ body {
         align-items: center;
         padding: 0 40px;
     }
-    .mostrar_texto {
-        height: 15vh;
-        margin: 40px;
-    }
     .main {
         line-height: 28.8px;
     }
     .secondary {
         line-height: 24px;
+    }
+    .muñeco {
+        display: none;
+    }
+}
+
+/*------------------DESKTOP----------------------*/
+
+@media screen and (min-width: 1240px) {
+    .header {
+        height: 100px;
+    }
+    .ingresar_texto textarea {
+        width: 60%;
+        position: relative;
+        left: 50px;
+    }
+    .warning {
+        padding: 0;
+        margin-left: 5%;
+        width: 60%;
+        position: absolute;
+        top: auto;
+        bottom: 150px;
+    }
+    .magia {
+        width: 60%;
+        position: absolute;
+        top: auto;
+        bottom: 50px;
+    }
+    .magia button {
+        width: 330px;
+    }
+    .mostrar_texto {
+        width: 25%;
+        height: 90vh;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        bottom: 20px;
+    }
+    .muñeco {
+        display: block;
+        width: -webkit-fill-available;
+    }
+    .muñeco_escondido {
+        display: none;
     }
 }
