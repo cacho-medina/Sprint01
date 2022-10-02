@@ -1,9 +1,11 @@
 let entrada = document.getElementById("ingresar_texto");
 let main = document.querySelector(".main");
-let padre = document.getElementById("mostrar_texto");
 let muñeco = document.querySelector(".muñeco");
+let copiar = document.querySelector(".copy__button");
+
 function encriptar() {
-    muñeco.className = "muñeco_escondido";
+    muñeco.style.display = "none";
+    copiar.style.display = "block";
     main.innerHTML = entrada.value;
     main.className = "salida";
 }
