@@ -27,7 +27,19 @@ body {
 .header h1 {
     padding: 15px;
 }
-
+/*/
+.header__logo {
+    animation: rotation 1s ease 0s infinite;
+}
+@keyframes rotation {
+    50% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(-180deg);
+    }
+}
+*/
 .ingresar_texto {
     width: 100%;
     height: 40%;
@@ -57,6 +69,7 @@ body {
     gap: 5px;
     padding: 10px;
     font-size: 0.8rem;
+    cursor: default;
 }
 
 .magia {
@@ -84,9 +97,15 @@ body {
     background-color: var(--font-color);
     color: white;
 }
+.encriptar:hover {
+    background-color: #0c2a4f;
+}
 .desencriptar {
     border: 1px solid var(--font-color);
     color: var(--font-color);
+}
+.desencriptar:hover {
+    background-color: lightgray;
 }
 
 .mostrar_texto {
@@ -138,6 +157,9 @@ body {
     color: var(--font-color);
     cursor: pointer;
 }
+.copy__button:hover {
+    background-color: lightgray;
+}
 
 /*------------------TABLETS----------------------*/
 @media screen and (min-width: 768px) {
@@ -188,6 +210,12 @@ body {
 @media screen and (min-width: 1240px) {
     .header {
         height: 100px;
+    }
+    .header__logo {
+        transition: all 1s ease 0s;
+    }
+    .header__logo:hover {
+        transform: rotateY(180deg);
     }
     .ingresar_texto textarea {
         width: 60%;
