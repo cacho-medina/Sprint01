@@ -35,7 +35,9 @@
         </section>
         <section class="magia">
             <button class="encriptar" onclick="encriptar()">Encriptar</button>
-            <button class="desencriptar">Desencriptar</button>
+            <button class="desencriptar" onclick="desencriptar()">
+                Desencriptar
+            </button>
         </section>
         <section class="mostrar_texto" id="mostrar_texto">
             <img src="images/Muñeco.svg" alt="ilustracion" class="muñeco" />
@@ -45,8 +47,9 @@
                     Ingresa el texto que desees encriptar o desencriptar
                 </span>
             </p>
-            <button class="copy__button">Copiar</button>
+            <button class="copy__button" onclick="copiar()">Copiar</button>
         </section>
         <script src="index.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
